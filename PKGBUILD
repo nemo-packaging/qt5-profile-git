@@ -1,4 +1,6 @@
+## $Id$
 # Contributor: Alexey Andreyev <aa13q@ya.ru>
+# Maintainer: James Kittsmiller (AJSlye) <james@nulogicsystems.com>
 
 pkgname=qt5-profile-git
 _srcname=qt5-profile
@@ -14,8 +16,7 @@ optdepends=()
 provides=("${_srcname}")
 conflicts=()
 source=(
-  "${pkgname}::git+${url}.git"
-)
+  "${pkgname}::git+${url}.git")
 sha256sums=('SKIP')
 
 pkgver() {
@@ -39,4 +40,3 @@ package() {
   cd build
   make INSTALL_ROOT="${pkgdir}" install
 }
-
